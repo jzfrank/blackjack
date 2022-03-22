@@ -1,0 +1,21 @@
+
+body {
+  min-height: 100vh;
+  width: auto;
+  padding: 0;
+}
+
+img {
+  height: 25vh;
+  width: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.btn {
+  margin: 1vh;
+}
+
+#button-group {
+  margin: 10vh;
+}
