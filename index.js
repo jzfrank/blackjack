@@ -78,13 +78,12 @@ function restart_game() {
   console.log("dealer cards:", dealer_cards);
   display_card("#dealer-cards", [dealer_cards[0], CARD_BACK]);
   // init user's cards
-
-  user_cards.push(hit_a_card());
   new_hit = hit_a_card();
   while (true) {
+    console.log("user_cards", user_cards.length);
+    if (user_cards.length == 2) break;
     if (!card_exists(new_hit)) {
       user_cards.push(new_hit);
-      break;
     }
     new_hit = hit_a_card();
   }
