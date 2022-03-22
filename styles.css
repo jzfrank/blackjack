@@ -1,13 +1,17 @@
+html {
+  height: 100vh;
+}
 
 body {
   min-height: 100vh;
   width: auto;
   padding: 0;
+  background-image: linear-gradient(white, green);
 }
 
 img {
-  height: 25vh;
-  width: auto;
+  height: 20vh;
+  width: 20vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
@@ -18,4 +22,26 @@ img {
 
 #button-group {
   margin: 10vh;
+}
+
+#dealer-cards {
+  background-image: url("dealer-cards.png");
+  background-size: contain;
+  height: 35vh;
+  width: 95%;
+  margin: auto;
+  opacity: 0.8;
+  padding: 5vh;
+  border: double;
+}
+
+#user-cards {
+  background-image: url("user-cards.png");
+  background-size: contain;
+  height: 35vh;
+  width: 95%;
+  margin: auto;
+  opacity: 0.8;
+  padding: 5vh;
+  border: double;
 }
