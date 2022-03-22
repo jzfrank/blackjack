@@ -23,6 +23,8 @@ img {
 
 #button-group {
   margin: 10vh;
+  margin-left: 30vh;
+  margin-right: 30vh;
 }
 
 #dealer-cards {
@@ -34,6 +36,7 @@ img {
   opacity: 0.8;
   padding: 5vh;
   border: double;
+  border-radius: 2%;
   overflow: hidden;
 }
 
@@ -46,6 +49,7 @@ img {
   opacity: 0.8;
   padding: 5vh;
   border: double;
+  border-radius: 2%;
   overflow: hidden;
 }
 
