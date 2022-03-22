@@ -17,6 +17,7 @@ img {
 }
 
 .btn {
+  font-family: 'Major Mono Display', monospace;
   margin: 1vh;
 }
 
@@ -46,4 +47,8 @@ img {
   padding: 5vh;
   border: double;
   overflow: hidden;
+}
+
+#info-board {
+  font-family: 'Fredoka', sans-serif;
 }

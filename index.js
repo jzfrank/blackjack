@@ -41,8 +41,6 @@ const CARD2VALUE = JSON.parse(
 let dealer_cards = [];
 let user_cards = [];
 
-// let hit_button_enabled = false;
-// let stand_button_enabled = false;
 $("#hit-button").addClass('disabled');
 $("#stand-button").addClass('disabled');
 
