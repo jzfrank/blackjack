@@ -60,8 +60,8 @@ function hit_a_card() {
 function restart_game() {
   $("#info-board").text("...");
   $("#start-button").text("Restart");
-  hit_button_enabled = true;
-  stand_button_enabled = true;
+  $("#hit-button").removeClass('disabled');
+  $("#stand-button").removeClass('disabled');
   // nullify
   dealer_cards = [];
   user_cards = [];
@@ -90,8 +90,8 @@ function restart_game() {
   display_card("#user-cards", user_cards);
   if (is_blackjack(user_cards)) {
     $("#info-board").text("You win! Because you get a blackjack!");
-    hit_button_enabled = false;
-    stand_button_enabled = false;
+    $("#hit-button").addClass('disabled');
+    $("#stand-button").addClass('disabled');
   }
 }
 
@@ -110,12 +110,11 @@ function card_exists(card) {
 }
 
 function add_card_to_user_and_display() {
-  if (!hit_button_enabled) return;
   add_card_to_user();
   display_card("#user-cards", user_cards);
   if (is_exploding(user_cards)) {
-    hit_button_enabled = false;
-    stand_button_enabled = false;
+    $("#hit-button").addClass('disabled');
+    $("#stand-button").addClass('disabled');
     $("#info-board").text("You lose! Because you reached more than 21 points.");
   }
 }
@@ -208,9 +207,8 @@ function get_best_value(cards) {
 }
 
 function moment_of_truth() {
-  if (!stand_button_enabled) return;
-  hit_button_enabled = false;
-  stand_button_enabled = false;
+  $("#hit-button").addClass('disabled');
+  $("#stand-button").addClass('disabled');
   const user_best_value = get_best_value(user_cards);
   console.log(user_cards);
   console.log(user_best_value);
@@ -245,6 +243,4 @@ function moment_of_truth() {
   else {
     $("#info-board").text(`It's a tie! Because dealer (${dealer_best_value}) is equal to you (${user_best_value}).`);
   }
-
-
 }
