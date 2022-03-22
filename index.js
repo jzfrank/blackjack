@@ -75,6 +75,7 @@ function restart_game() {
     }
     new_hit = hit_a_card();
   }
+  console.log("dealer cards:", dealer_cards);
   display_card("#dealer-cards", [dealer_cards[0], CARD_BACK]);
   // init user's cards
 
@@ -132,7 +133,7 @@ function add_card_to_user() {
 }
 
 function add_card_to_dealer_and_display() {
-  add_card_to_user();
+  add_card_to_dealer();
   display_card("#dealer-cards", dealer_cards);
 }
 
@@ -151,9 +152,9 @@ function add_card_to_dealer() {
 function is_exploding(cards) {
   const cards_values = get_cards_values(cards);
   const possible_values = get_possible_values(cards_values);
-  if (possible_values.reduce(function(a, b) {
-      return Math.min(a, b);
-    }, Infinity) > 21) return true;
+  if (possible_values.filter(val => val <= 21).length === 0) {
+    return true;
+  }
   else return false;
 }
 
@@ -219,6 +220,8 @@ function moment_of_truth() {
   // while max of card values < 17, rehit
   let dealer_best_value;
   while (true) {
+    console.log("while loop of moment_of_truth");
+    console.log(dealer_best_value);
     dealer_best_value = get_best_value(dealer_cards);
     // the while loop ends either dealer explodes or best value less than 17
     if (dealer_best_value != -Infinity && dealer_best_value < 17) {
