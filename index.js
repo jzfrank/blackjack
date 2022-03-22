@@ -152,7 +152,7 @@ function add_card_to_dealer() {
 function is_exploding(cards) {
   const cards_values = get_cards_values(cards);
   const possible_values = get_possible_values(cards_values);
-  if (possible_values.filter(val => val <= 21).length === 0) {
+  if (possible_values.filter(val => (val <= 21)).length === 0) {
     return true;
   }
   else return false;
@@ -221,7 +221,7 @@ function moment_of_truth() {
   let dealer_best_value;
   while (true) {
     console.log("while loop of moment_of_truth");
-    console.log(dealer_best_value);
+    console.log(dealer_cards);
     dealer_best_value = get_best_value(dealer_cards);
     // the while loop ends either dealer explodes or best value less than 17
     if (dealer_best_value != -Infinity && dealer_best_value < 17) {
@@ -233,6 +233,7 @@ function moment_of_truth() {
   }
   if (is_exploding(dealer_cards)) {
     $("#info-board").text("You win! Because dealer reached more than 21 points.");
+    return;
   }
   // if both do not explode, we compare the value
   dealer_best_value = get_best_value(dealer_cards);
@@ -243,7 +244,7 @@ function moment_of_truth() {
     $("#info-board").text(`You win! Because dealer (${dealer_best_value}) is smaller than you (${user_best_value}).`);
   }
   else {
-    $("#info-board").text("It's a tie! Because dealer (${dealer_best_value}) is equal to you (${user_best_value}).");
+    $("#info-board").text(`It's a tie! Because dealer (${dealer_best_value}) is equal to you (${user_best_value}).`);
   }
 
 
