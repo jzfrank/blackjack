@@ -10,10 +10,10 @@ body {
 }
 
 img {
-  height: 20vh;
-  width: 20vw;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  height: 80%;
+  width: 15%;
+  /* margin-top: 5vh; */
+  /* margin-bottom: 5vh; */
 }
 
 .btn {
@@ -33,6 +33,7 @@ img {
   opacity: 0.8;
   padding: 5vh;
   border: double;
+  overflow: hidden;
 }
 
 #user-cards {
@@ -44,4 +45,5 @@ img {
   opacity: 0.8;
   padding: 5vh;
   border: double;
+  overflow: hidden;
 }
