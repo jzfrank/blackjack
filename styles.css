@@ -5,15 +5,13 @@ html {
 body {
   min-height: 100vh;
   width: auto;
-  padding: 0;
+  padding: 5vh;
   background-image: linear-gradient(white, green);
 }
 
 img {
   height: 80%;
   width: 15%;
-  /* margin-top: 5vh; */
-  /* margin-bottom: 5vh; */
 }
 
 .btn {
@@ -22,15 +20,15 @@ img {
 }
 
 #button-group {
-  margin: 10vh;
-  margin-left: 30vh;
-  margin-right: 30vh;
+  margin: 3vw;
+  width: 90vw;
+  height: 10vw;
 }
 
 #dealer-cards {
   background-image: url("dealer-cards.png");
   background-size: contain;
-  height: 35vh;
+  height: auto;
   width: 95%;
   margin: auto;
   opacity: 0.8;
@@ -43,7 +41,7 @@ img {
 #user-cards {
   background-image: url("user-cards.png");
   background-size: contain;
-  height: 35vh;
+  height: auto;
   width: 95%;
   margin: auto;
   opacity: 0.8;
@@ -56,3 +54,68 @@ img {
 #info-board {
   font-family: 'Fredoka', sans-serif;
 }
+
+#rule-board {
+  font-size: 200%;
+  color: white;
+}
+
+
+/* when user rotate the phone to landscape */
+@media (orientation: landscape) and (min-width: 768px) {
+  body {
+    max-height: 100vh;
+    width: auto;
+    padding: 5vh;
+    background-image: radial-gradient(white, green);
+  }
+
+  button {
+    width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 12vh;
+  }
+
+  #title-board {
+    font-size: 50%;
+  }
+
+  #title-board h1 {
+    font-size: 30px;
+  }
+
+  #button-group {
+    margin: 3vw;
+    width: 90vw;
+    height: 10vw;
+  }
+
+  #rule-board {
+    font-size: 100%;
+    color: black;
+  }
+  
+}
+
+/* when the screen size is larger than 768px, resize (mobile first) */
+@media only screen and  (min-width: 768px) {
+  button {
+    width: 100%;
+    height: auto;
+  }
+
+  #button-group {
+    width: auto;
+    height: auto;
+    margin: 5vh;
+  }
+
+  #rule-board {
+    font-size: 100%;
+    color: black;
+  }
+}
+

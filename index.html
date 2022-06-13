@@ -23,7 +23,11 @@
   <body class="container-fluid">
 
 
-
+    <div id="title-board">
+      <h1 style="text-align: center;">Easy Blackjack</h1>
+      <p>Made by Jin with 💗</p>
+    </div>
+    
     <div class="d-flex justify-content-start" id="dealer-cards">
       <!-- to be changed dynamically  -->
       <img src="images/Card_back_01.svg" alt="">
@@ -42,15 +46,29 @@
 
     <div class="d-flex justify-content-between" id="button-group">
       <div class="d-flex justify-content-start">
-        <button type="button" class="btn btn-danger" id="start-button">Start</button>
+        <button type="button" class="btn btn-danger btn-block" id="start-button">Start</button>
       </div>
 
       <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-primary" id="hit-button">Hit</button>
-        <button type="button" class="btn btn-dark" id="stand-button">Stand</button>
+        <button type="button" class="btn btn-primary btn-block" id="hit-button">Hit</button>
+        <button type="button" class="btn btn-dark btn-block" id="stand-button">Stand</button>
       </div>
     </div>
 
+    <div id="rule-board">
+      <h3>Rules:</h3>
+      <p>
+        There are three buttons: restart, hit, and stand. 
+        If you think your card value is too small, you can <em>hit</em>.
+        If you think your card value is too large, you can <em>stand</em>.
+        If you lose or simply want to try next round, you can <em>restart</em>.
+      </p>
+      <p>
+        You win automatically if you get a <em>blackjack</em> (ace plus ten) in the beginning. 
+        Note ace could be treated either as 1 or 11.
+        Also note if you choose to stand, the dealer (computer) will keep hitting until its card values sum up to more than 17.
+      </p>
+    </div>
 
 
 
