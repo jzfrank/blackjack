@@ -274,7 +274,7 @@ function moment_of_truth() {
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 500);
+    }, 1000);
     // alert(msg);
     return;
   }
@@ -285,21 +285,21 @@ function moment_of_truth() {
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 500);
+    }, 1000);
     // alert(msg);
   } else if (dealer_best_value < user_best_value) {
     let msg = `You win! Because dealer (${dealer_best_value}) is smaller than you (${user_best_value}).`;
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 500);
+    }, 1000);
     // alert(msg);
   } else {
     let msg = `It's a tie! Because dealer (${dealer_best_value}) is equal to you (${user_best_value}).`;
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 500);
+    }, 1000);
     // alert(msg);
   }
 }
