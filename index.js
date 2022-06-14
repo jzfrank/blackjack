@@ -134,9 +134,14 @@ function restart_game() {
 
 function display_card(id_name, cards) {
   let text = "";
+  console.log("Inside display_card");
   for (var i = 0; i < cards.length; i++) {
     text += `<img src="images/${cards[i]}" alt="">`;
   }
+  // $("img").load(function () {
+  //   $(id_name).html(text);
+  //   alert("image loaded");
+  // });
   $(id_name).html(text);
 }
 
@@ -269,7 +274,8 @@ function moment_of_truth() {
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 100);
+    }, 50);
+    // alert(msg);
     return;
   }
   // if both do not explode, we compare the value
@@ -279,18 +285,21 @@ function moment_of_truth() {
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 100);
+    }, 50);
+    // alert(msg);
   } else if (dealer_best_value < user_best_value) {
     let msg = `You win! Because dealer (${dealer_best_value}) is smaller than you (${user_best_value}).`;
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 100);
+    }, 50);
+    // alert(msg);
   } else {
     let msg = `It's a tie! Because dealer (${dealer_best_value}) is equal to you (${user_best_value}).`;
     $("#info-board").text(msg);
     setTimeout(function () {
       alert(msg);
-    }, 100);
+    }, 50);
+    // alert(msg);
   }
 }
